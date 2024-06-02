@@ -1,12 +1,13 @@
-import React from 'react';
-import CardWithImage from "../components/CardWithImage";
+import React from "react";
 
-const test = () => {
+import Layout from "../layout/layout";
+
+const Test = () => {
   return (
-    <div>
-      <CardWithImage />
+    <div className="bg-bg-beige">
+      <Layout />
     </div>
   );
 };
 
-export default test;
+export default Test;
