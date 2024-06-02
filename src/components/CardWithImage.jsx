@@ -8,20 +8,19 @@ const CardWithImage = ({ product }) => {
       <img src={product.imageUrl} alt={product.name} className="w-full h-48 object-cover" />
       <h1 className="text-xl font-bold leading-7">{product.name}</h1>
       <p className="text-lg font-semibold">${product.price.toFixed(2)}</p>
-      <p>{product.description}</p>
-      <button className="w-full px-3 py-4 bg-dark-green rounded-lg text-center text-base font-bold text-white">
+      <p className="flex-grow">{product.description}</p>
+      <button className="w-full px-3 py-4 bg-dark-green rounded-lg text-center text-base font-bold text-white mt-auto">
         Add
       </button>
     </div>
   );
 };
-
 // Componente que exibe a lista de produtos
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/products')
+    axios.get('http://localhost:3000/products')
       .then(response => {
         console.log(response.data); // Adicionado para depurar os dados recebidos
         setProducts(response.data);
