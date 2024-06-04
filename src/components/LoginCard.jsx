@@ -20,13 +20,15 @@ const LoginCard = () => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-y-11 w-full px-12 ">
+      <div className="flex flex-col gap-y-11 w-full px-12">
         <div className="flex flex-row justify-between pb-2 border-b-2 border-dark-green">
-          <label className="text-2xl/[33.6px] font-bold text-dark-green">
+          <label htmlFor="email" className="text-2xl/[33.6px] font-bold text-dark-green">
             Email
           </label>
           <input
             type="email"
+            id="email"
+            name="email"
             required
             className="bg-transparent outline-none border-0"
           />
@@ -34,11 +36,13 @@ const LoginCard = () => {
         </div>
 
         <div className="flex flex-row justify-between pb-2 border-b-2 border-dark-green">
-          <label className="text-2xl/[33.6px] font-bold text-dark-green ">
+          <label htmlFor="password" className="text-2xl/[33.6px] font-bold text-dark-green">
             Senha
           </label>
           <input
-            type="text"
+            type="password"
+            id="password"
+            name="password"
             required
             className="bg-transparent outline-none border-0"
           />
@@ -54,8 +58,9 @@ const LoginCard = () => {
           Entrar
         </button>
         <p>Ou</p>
-        <button className="w-[290px] h-[63px] px-4 py-3 bg-card-bg-beige text-dark-green text-2xl font-bold border-[3px] border-dark-green rounded-lg" 
-        onClick={pageNotFound}
+        <button 
+          className="w-[290px] h-[63px] px-4 py-3 bg-card-bg-beige text-dark-green text-2xl font-bold border-[3px] border-dark-green rounded-lg" 
+          onClick={pageNotFound}
         >
           Criar cadastro
         </button>

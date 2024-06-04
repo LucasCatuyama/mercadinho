@@ -1,7 +1,6 @@
 import React, { useState, useEffect, axios } from "react";
 import CardWithImage from "../components/CardWithImage";
 import Layout from "../layout/layout";
-export const Head = () => <title>Mercadinho</title>;
 
 const IndexPage = () => {
   const ProductList = ({ incrementCount }) => {
