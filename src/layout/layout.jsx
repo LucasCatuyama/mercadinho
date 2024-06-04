@@ -1,22 +1,17 @@
-import React, { useState } from "react";
-import Header from "../layout/header";
-import Main from "../layout/main";
-import Footer from "../layout/footer";
+import React, { Children, useState } from "react";
+import Header from './header'
+import Footer from "./footer";
+import IndexPage from "../pages";
 
-const Layout = () => {
-  const [count, setCount] = useState(0);
 
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
 
-  return (
-    <div className="bg-bg-beige">
-      <Header count={count} incrementCount={incrementCount} />
-      <Main incrementCount={incrementCount} />
-      <Footer />
-    </div>
-  );
+export default function Layout({Children}){
+    return (
+        <div className="bg-bg-beige">
+            <Header />
+            <IndexPage>{Children}</IndexPage> 
+            <Footer />
+        </div>
+    );
 };
 
-export default Layout;
