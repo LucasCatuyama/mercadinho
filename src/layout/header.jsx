@@ -5,6 +5,8 @@ import cartIcon from "../images/cart.png";
 import userIcon from "../images/user.png";
 
 export default function Header() {
+
+
     return (
         <div className="flex flex-row justify-between items-center gap-6 px-20 py-12">
             <Link to="/">
