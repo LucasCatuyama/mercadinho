@@ -1,88 +1,91 @@
 {
-  "products": [
-    {
-      "id": "1",
-      "name": "Rice",
-      "price": 20.99,
-      "description": "Premium quality rice, perfect for daily meals. Each grain is carefully selected to ensure a soft and fluffy texture. This 5kg package is ideal for families.",
-      "imageUrl": "https://i.imgur.com/7uyU8wh.png"
-    },
-    {
-      "id": "2",
-      "name": "Beans",
-      "price": 8.5,
-      "description": "High-quality carioca beans, rich in protein and fiber. These beans are perfect for making traditional Brazilian feijoada. Packaged in a convenient 1kg bag.",
-      "imageUrl": "https://i.imgur.com/VOLTokJ.png"
-    },
-    {
-      "id": "3",
-      "name": "Pasta",
-      "price": 4.75,
-      "description": "Durum wheat spaghetti pasta, ideal for creating delicious Italian dishes. This 500g package provides enough for multiple servings. Cooks to al dente perfection.",
-      "imageUrl": "https://i.imgur.com/1Wohm7e.png"
-    },
-    {
-      "id": "4",
-      "name": "Soy Oil",
-      "price": 7.3,
-      "description": "Pure soy oil, perfect for frying and baking. Rich in essential fatty acids and vitamin E, this 1-liter bottle ensures high-quality cooking.",
-      "imageUrl": "https://i.imgur.com/eonx6cZ.png"
-    },
-    {
-      "id": "5",
-      "name": "Sugar",
-      "price": 3.4,
-      "description": "Refined white sugar, ideal for baking and sweetening beverages. This 1kg package is a staple in every kitchen. Dissolves quickly and evenly.",
-      "imageUrl": "https://i.imgur.com/UnIHKXv.png"
-    },
-    {
-      "id": "6",
-      "name": "Salt",
-      "price": 2.2,
-      "description": "Fine table salt, perfect for seasoning and cooking. This 1kg package ensures you have enough salt for all your culinary needs. Pure and natural.",
-      "imageUrl": "https://i.imgur.com/zqe4QBL.png"
-    },
-    {
-      "id": "7",
-      "name": "Coffee",
-      "price": 15.99,
-      "description": "Ground coffee, sourced from the finest beans. This 500g package delivers a rich and aromatic experience. Perfect for starting your day.",
-      "imageUrl": "https://i.imgur.com/hfLzurE.png"
-    },
-    {
-      "id": "8",
-      "name": "Bread",
-      "price": 5.5,
-      "description": "Freshly baked bread, with a soft inside and crispy crust. Perfect for sandwiches or as a side with meals. This 1kg package offers great value.",
-      "imageUrl": "https://i.imgur.com/dEUZozi.png"
-    },
-    {
-      "id": "9",
-      "name": "Butter",
-      "price": 12.99,
-      "description": "Creamy salted butter, perfect for spreading and cooking. This 200g package ensures a rich and smooth flavor in every bite. High in quality.",
-      "imageUrl": "https://i.imgur.com/yVhuuiu.png"
-    },
-    {
-      "id": "10",
-      "name": "Milk",
-      "price": 6.75,
-      "description": "Whole milk, rich in calcium and essential nutrients. This 1-liter carton is perfect for drinking, cooking, or adding to your coffee.",
-      "imageUrl": "https://i.imgur.com/cj4QDNz.png"
-    },
-    {
-      "id": "11",
-      "name": "Eggs",
-      "price": 9.9,
-      "description": "Pack of 12 large eggs, sourced from free-range chickens. Rich in protein and perfect for baking, breakfast, or as a snack.",
-      "imageUrl": "https://i.imgur.com/H0hdu9B.png"
-    },
-    {
-      "id": "12",
-      "name": "Cheese",
-      "price": 25.5,
-      "description": "Cheddar cheese block, 500g of creamy and rich flavor. Perfect for sandwiches, cooking, or as a snack. Made from high-quality milk.",
-      "imageUrl": "https://i.imgur.com/iEOC7rp.png"
-    }
-  ]
+    "products": [
+        {
+            "id": 1,
+            "name": "Rice",
+            "price": 20.99,
+            "description": "Premium quality rice, perfect for daily meals. Each grain is carefully selected to ensure a soft and fluffy texture. This 5kg package is ideal for families.",
+            "imageUrl": "https://i.imgur.com/7uyU8wh.png"
+        },
+        {
+            "id": 2,
+            "name": "Beans",
+            "price": 8.50,
+            "description": "High-quality carioca beans, rich in protein and fiber. These beans are perfect for making traditional Brazilian feijoada. Packaged in a convenient 1kg bag.",
+            "imageUrl": "https://i.imgur.com/VOLTokJ.png"
+        },
+        {
+            "id": 3,
+            "name": "Pasta",
+            "price": 4.75,
+            "description": "Durum wheat spaghetti pasta, ideal for creating delicious Italian dishes. This 500g package provides enough for multiple servings. Cooks to al dente perfection.",
+            "imageUrl": "https://i.imgur.com/1Wohm7e.png"
+        },
+        {
+            "id": 4,
+            "name": "Soy Oil",
+            "price": 7.30,
+            "description": "Pure soy oil, perfect for frying and baking. Rich in essential fatty acids and vitamin E, this 1-liter bottle ensures high-quality cooking.",
+            "imageUrl": "https://i.imgur.com/eonx6cZ.png"
+        },
+        {
+            "id": 5,
+            "name": "Sugar",
+            "price": 3.40,
+            "description": "Refined white sugar, ideal for baking and sweetening beverages. This 1kg package is a staple in every kitchen. Dissolves quickly and evenly.",
+            "imageUrl": "https://i.imgur.com/UnIHKXv.png"
+        },
+        {
+            "id": 6,
+            "name": "Salt",
+            "price": 2.20,
+            "description": "Fine table salt, perfect for seasoning and cooking. This 1kg package ensures you have enough salt for all your culinary needs. Pure and natural.",
+            "imageUrl": "https://i.imgur.com/zqe4QBL.png"
+        },
+        {
+            "id": 7,
+            "name": "Coffee",
+            "price": 15.99,
+            "description": "Ground coffee, sourced from the finest beans. This 500g package delivers a rich and aromatic experience. Perfect for starting your day.",
+            "imageUrl": "https://i.imgur.com/hfLzurE.png"
+        },
+        {
+            "id": 8,
+            "name": "Bread",
+            "price": 5.50,
+            "description": "Freshly baked bread, with a soft inside and crispy crust. Perfect for sandwiches or as a side with meals. This 1kg package offers great value.",
+            "imageUrl": "https://i.imgur.com/dEUZozi.png"
+        },
+        {
+            "id": 9,
+            "name": "Butter",
+            "price": 12.99,
+            "description": "Creamy salted butter, perfect for spreading and cooking. This 200g package ensures a rich and smooth flavor in every bite. High in quality.",
+            "imageUrl": "https://i.imgur.com/yVhuuiu.png"
+        },
+        {
+            "id": 10,
+            "name": "Milk",
+            "price": 6.75,
+            "description": "Whole milk, rich in calcium and essential nutrients. This 1-liter carton is perfect for drinking, cooking, or adding to your coffee.",
+            "imageUrl": "https://i.imgur.com/cj4QDNz.png"
+        },
+        {
+            "id": 11,
+            "name": "Eggs",
+            "price": 9.90,
+            "description": "Pack of 12 large eggs, sourced from free-range chickens. Rich in protein and perfect for baking, breakfast, or as a snack.",
+            "imageUrl": "https://i.imgur.com/H0hdu9B.png"
+        },
+        {
+            "id": 12,
+            "name": "Cheese",
+            "price": 25.50,
+            "description": "Cheddar cheese block, 500g of creamy and rich flavor. Perfect for sandwiches, cooking, or as a snack. Made from high-quality milk.",
+            "imageUrl": "https://i.imgur.com/iEOC7rp.png"
+        }
+    ],
+    "cart": [
+        
+    ]
 }

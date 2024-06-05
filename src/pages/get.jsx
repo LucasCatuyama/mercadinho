@@ -1,5 +1,5 @@
 import * as React from "react";
-import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
 
 const NotFoundPage = () => {
   const returnToHome = () => {
