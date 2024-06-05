@@ -1,15 +1,16 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import Header from './header'
 import Footer from "./footer";
-import IndexPage from "../pages";
 
 
 
-export default function Layout({Children}){
+export default function Layout({children}){
     return (
         <div className="bg-bg-beige">
             <Header />
-            <IndexPage>{Children}</IndexPage> 
+            <div>
+                {children}
+            </div> 
             <Footer />
         </div>
     );

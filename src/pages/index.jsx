@@ -2,6 +2,7 @@ import * as React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CardWithImage from '../components/CardWithImage'
+import Layout from "../layout/layout";
 
 
 
@@ -26,13 +27,13 @@ export default function IndexPage() {
 
 
     return (
-        <div>
+        <Layout>
             <div className="grid justify-items-center gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 p-20">
                 {products.map(product => (
                     <CardWithImage key={product.id} product={product} />
                 ))}
             </div>
-        </div>
+        </Layout>
 
     );
 };
