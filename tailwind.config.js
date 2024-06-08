@@ -14,9 +14,6 @@ module.exports = {
         "text-green": "#001612",
         "button-brown": "#C05A21",
       },
-      fontFamily: {
-        
-      }
     },
   },
   plugins: [],

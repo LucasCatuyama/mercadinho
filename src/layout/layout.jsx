@@ -8,9 +8,7 @@ export default function Layout({children}){
     return (
         <div className="bg-bg-beige">
             <Header />
-            <div>
                 {children}
-            </div> 
             <Footer />
         </div>
     );

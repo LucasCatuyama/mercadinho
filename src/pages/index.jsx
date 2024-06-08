@@ -4,15 +4,10 @@ import { useState, useEffect } from "react";
 import CardWithImage from '../components/CardWithImage'
 import Layout from "../layout/layout";
 
-
-
-
 export const Head = () => <title>Mercadinho</title>;
-
 
 export default function IndexPage() {
     const [products, setProducts] = useState([]);
-
 
     useEffect(() => {
         axios.get('http://localhost:3000/products')
@@ -24,7 +19,6 @@ export default function IndexPage() {
                 console.error('There was an error fetching the products!', error);
             });
     }, []);
-
 
     return (
         <Layout>

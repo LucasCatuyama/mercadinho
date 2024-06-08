@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "mock": "json-server --watch ./data/db.json"
+    "mock": "json-server --watch ./data/db.json --port 3000"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
