@@ -1,21 +1,10 @@
 import React from "react";
-import { useLocation } from "@reach/router";
 import { Link } from "gatsby";
 import mercadinhoLogoVerde from "../images/mercadinho-logo-verde.png";
 import cartIcon from "../images/cart.png";
 import userIcon from "../images/user.png";
 
-export default function Header() {
-    
-  const currentUrl = useLocation();
-
-  function alreadyLogged() {
-    const admUrl = "/adm";
-    if (currentUrl.pathname === admUrl) {
-      alert("You are already logged in");
-    }
-  }
-
+export default function Header({ totalQuantity }) {
   return (
     <div className="flex flex-row justify-between items-center gap-6 px-20 py-12">
       <Link to="/">
@@ -33,13 +22,13 @@ export default function Header() {
       </form>
 
       <div className="flex flex-row gap-10">
-        <p className="text-[32px]/[44.8px] text-center text-[#004D3D] font-bold">
-          Número
+        <p className="text-[32px]/[44.8px] text-center text-text-green font-bold">
+          {totalQuantity}
         </p>
-        <Link to="/404">
+        <Link to="/cart">
           <img src={cartIcon} alt="Green cart icon." />
         </Link>
-        <Link onClick={alreadyLogged} to="/login">
+        <Link to="/login">
           <img src={userIcon} alt="Green user icon" />
         </Link>
       </div>

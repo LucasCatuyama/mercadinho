@@ -13,7 +13,13 @@ const Adm = () => {
 
   async function addProduct(product) {
     try {
-      await axios.post("http://localhost:3000/products", product);
+      // Fetch all products to determine the next ID
+      const response = await axios.get("http://localhost:3000/products");
+      const products = response.data;
+      const newId = products.length > 0 ? Math.max(...products.map(p => parseInt(p.id))) + 1 : 1;
+
+      // Add the new product with the calculated ID
+      await axios.post("http://localhost:3000/products", { ...product, id: newId.toString() });
       alert("Product successfully added!");
 
       setName('');
@@ -39,15 +45,14 @@ const Adm = () => {
     await addProduct(newProduct);
   }
 
-
-  async function removeProduct (id) {
+  async function removeProduct(id) {
     try {
-        await axios.delete(`http://localhost:3000/products/${id}`);
-        alert('Product successfully removed!');
-        setProductId('');
-        setError('');
+      await axios.delete(`http://localhost:3000/products/${id}`);
+      alert('Product successfully removed!');
+      setProductId('');
+      setError('');
     } catch (err) {
-        setError('An error occurred while removing the product. Try it again.');
+      setError('An error occurred while removing the product. Try it again.');
     }
   }
 
@@ -100,7 +105,7 @@ const Adm = () => {
             <label htmlFor="imageUrl">Image source: </label>
             <input
               type="text"
-              name="image"
+              name="imageUrl"
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
               className="w-full pl-1 bg-card-bg-beige border-2 border-dark-green rounded"
@@ -123,10 +128,11 @@ const Adm = () => {
             name='id'
             value={productId}
             onChange={(e) => setProductId(e.target.value)}
-            className="w-full pl-1 bg-card-bg-beige border-2 border-button-brown rounded focus:border-2 focus:bo"
+            className="w-full pl-1 bg-card-bg-beige border-2 border-button-brown rounded"
+            required
           />
-          <button className="w-full h-auto px-3 py-2 bg-button-brown text-white text-xl font-bold rounded-lg">
-            Remover product
+          <button type="submit" className="w-full h-auto px-3 py-2 bg-button-brown text-white text-xl font-bold rounded-lg">
+            Remove product
           </button>
         </form>
       </div>

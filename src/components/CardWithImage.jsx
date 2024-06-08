@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const CardWithImage = ({ product }) => {
+const CardWithImage = ({ product, onAddToCart, errorMessage, successMessage }) => {
   const price = Number(product.price);
 
   return (
@@ -10,20 +9,13 @@ const CardWithImage = ({ product }) => {
       <h1 className="text-xl font-bold leading-7">{product.name}</h1>
       <p className="text-lg font-semibold">${price.toFixed(2)}</p>
       <p className="flex-grow">{product.description}</p>
-      <button className="w-full px-3 py-4 bg-dark-green rounded-lg text-center text-base font-bold text-white mt-auto">
+      <button onClick={() => onAddToCart(product)} className="w-full px-3 py-4 bg-dark-green rounded-lg text-center text-base font-bold text-white mt-auto">
         Add
       </button>
+      {errorMessage && <p className="w-full text-red-500 text-xs italic-normal text-center">{errorMessage}</p>}
+      {successMessage && <p className="w-full text-dark-green text-xl/normal text-center italic">{successMessage}</p>}
     </div>
   );
-};
-
-CardWithImage.propTypes = {
-  product: PropTypes.shape({
-    imageUrl: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 export default CardWithImage;
