@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './header'; // Ensure the Header component is correctly imported
+import Header from './header';
 import Footer from './footer';
 
 export default function Layout({ children, totalQuantity }) {

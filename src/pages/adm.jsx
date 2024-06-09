@@ -1,58 +1,53 @@
 import React, { useState } from "react";
 import Layout from "../layout/layout";
-import axios from 'axios';
+import axios from "axios";
 
 const Adm = () => {
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
-  const [description, setDescription] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
-  const [error, setError] = useState('');
-
-  const [productId, setProductId] = useState('');
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [error, setError] = useState("");
+  const [productId, setProductId] = useState("");
 
   async function addProduct(product) {
     try {
-      // Fetch all products to determine the next ID
       const response = await axios.get("http://localhost:3000/products");
       const products = response.data;
-      const newId = products.length > 0 ? Math.max(...products.map(p => parseInt(p.id))) + 1 : 1;
-
-      // Add the new product with the calculated ID
-      await axios.post("http://localhost:3000/products", { ...product, id: newId.toString() });
+      const newId =
+        products.length > 0
+          ? Math.max(...products.map((p) => parseInt(p.id))) + 1
+          : 1;
+      await axios.post("http://localhost:3000/products", {
+        ...product,
+        id: newId.toString(),
+      });
       alert("Product successfully added!");
 
-      setName('');
-      setPrice('');
-      setDescription('');
-      setImageUrl('');
-      setError('');
+      setName("");
+      setPrice("");
+      setDescription("");
+      setImageUrl("");
+      setError("");
     } catch (err) {
-      setError('An error occurred while adding the product. Try it again.');
+      setError("An error occurred while adding the product. Try it again.");
     }
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-
-    const newProduct = {
-      name,
-      price,
-      description,
-      imageUrl,
-    };
-
+    const newProduct = { name, price, description, imageUrl };
     await addProduct(newProduct);
   }
 
   async function removeProduct(id) {
     try {
       await axios.delete(`http://localhost:3000/products/${id}`);
-      alert('Product successfully removed!');
-      setProductId('');
-      setError('');
+      alert("Product successfully removed!");
+      setProductId("");
+      setError("");
     } catch (err) {
-      setError('An error occurred while removing the product. Try it again.');
+      setError("An error occurred while removing the product. Try it again.");
     }
   }
 
@@ -64,7 +59,10 @@ const Adm = () => {
   return (
     <Layout>
       <div className="flex flex-row justify-center items-start gap-10 w-full h-screen">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-[250px] h-auto p-6 bg-card-bg-beige border-2 border-dark-green rounded-2xl">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-2 w-[250px] h-auto p-6 bg-card-bg-beige border-2 border-dark-green rounded-2xl"
+        >
           <p className="text-2xl font-bold text-center text-dark-green">
             Add product
           </p>
@@ -112,12 +110,18 @@ const Adm = () => {
               required
             />
           </div>
-          <button type="submit" className="w-full h-auto px-3 py-2 bg-dark-green text-white text-xl font-bold rounded-lg">
+          <button
+            type="submit"
+            className="w-full h-auto px-3 py-2 bg-dark-green text-white text-xl font-bold rounded-lg"
+          >
             Add product
           </button>
         </form>
 
-        <form onSubmit={handleRemove} className="flex flex-col gap-2 w-[250px] h-auto p-6 bg-card-bg-beige border-2 border-button-brown rounded-2xl">
+        <form
+          onSubmit={handleRemove}
+          className="flex flex-col gap-2 w-[250px] h-auto p-6 bg-card-bg-beige border-2 border-button-brown rounded-2xl"
+        >
           <p className="text-2xl font-bold text-center text-button-brown">
             Remove product
           </p>
@@ -125,13 +129,16 @@ const Adm = () => {
           <label htmlFor="id">ID: </label>
           <input
             type="text"
-            name='id'
+            name="id"
             value={productId}
             onChange={(e) => setProductId(e.target.value)}
             className="w-full pl-1 bg-card-bg-beige border-2 border-button-brown rounded"
             required
           />
-          <button type="submit" className="w-full h-auto px-3 py-2 bg-button-brown text-white text-xl font-bold rounded-lg">
+          <button
+            type="submit"
+            className="w-full h-auto px-3 py-2 bg-button-brown text-white text-xl font-bold rounded-lg"
+          >
             Remove product
           </button>
         </form>

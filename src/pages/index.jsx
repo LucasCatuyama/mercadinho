@@ -95,7 +95,7 @@ export default function IndexPage() {
   }
 
   return (
-    <Layout totalQuantity={totalQuantity}> {/* Pass totalQuantity as a prop */}
+    <Layout totalQuantity={totalQuantity}>
       <div className="grid justify-items-center gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 p-20">
         {products.map((product) => (
           <CardWithImage
