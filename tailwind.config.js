@@ -11,7 +11,7 @@ module.exports = {
         "bg-beige": "#E7D8C0",
         "card-bg-beige": "#FFF6E7",
         "dark-green": "#00362B",
-        "text-green": "#001612",
+        "text-green": "#032b24",
         "button-brown": "#C05A21",
       },
     },

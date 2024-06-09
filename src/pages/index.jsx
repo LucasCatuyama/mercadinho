@@ -11,7 +11,7 @@ export default function IndexPage() {
   const [cart, setCart] = useState([]);
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState({});
-  const [totalQuantity, setTotalQuantity] = useState(0); // Add state for total quantity
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   useEffect(() => {
     axios
@@ -27,7 +27,7 @@ export default function IndexPage() {
       .get("http://localhost:3000/cart")
       .then((response) => {
         setCart(response.data);
-        calculateTotalQuantity(response.data); // Calculate total quantity on initial load
+        calculateTotalQuantity(response.data);
       })
       .catch((error) => {
         console.error("There was an error fetching the cart items!", error);
@@ -35,7 +35,7 @@ export default function IndexPage() {
   }, []);
 
   useEffect(() => {
-    calculateTotalQuantity(cart); // Recalculate total quantity whenever cart changes
+    calculateTotalQuantity(cart);
   }, [cart]);
 
   const calculateTotalQuantity = (cartItems) => {
