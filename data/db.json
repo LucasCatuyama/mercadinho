@@ -85,38 +85,5 @@
       "imageUrl": "https://i.imgur.com/iEOC7rp.png"
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "quantity": 1,
-      "name": "Rice",
-      "price": 20.99,
-      "description": "Premium quality rice, perfect for daily meals. Each grain is carefully selected to ensure a soft and fluffy texture. This 5kg package is ideal for families.",
-      "imageUrl": "https://i.imgur.com/7uyU8wh.png"
-    },
-    {
-      "id": "2",
-      "quantity": 1,
-      "name": "Beans",
-      "price": 8.5,
-      "description": "High-quality carioca beans, rich in protein and fiber. These beans are perfect for making traditional Brazilian feijoada. Packaged in a convenient 1kg bag.",
-      "imageUrl": "https://i.imgur.com/VOLTokJ.png"
-    },
-    {
-      "id": "3",
-      "quantity": 1,
-      "name": "Pasta",
-      "price": 4.75,
-      "description": "Durum wheat spaghetti pasta, ideal for creating delicious Italian dishes. This 500g package provides enough for multiple servings. Cooks to al dente perfection.",
-      "imageUrl": "https://i.imgur.com/1Wohm7e.png"
-    },
-    {
-      "id": "5",
-      "quantity": 5,
-      "name": "Sugar",
-      "price": 3.4,
-      "description": "Refined white sugar, ideal for baking and sweetening beverages. This 1kg package is a staple in every kitchen. Dissolves quickly and evenly.",
-      "imageUrl": "https://i.imgur.com/UnIHKXv.png"
-    }
-  ]
+  "cart": []
 }
