@@ -8,6 +8,7 @@ This project contains several mistakes and inconsistencies as it was my first Re
 
 - **Gatsby** was not an ideal choice for this type of project.
 - Component names are incorrectly formatted (first letters not uppercase).
+- The site is not responsive on mobile.
 - No further updates or maintenance will be provided.
 
 This project is currently being refactored and improved in [minimarket](https://github.com/LucasCatuyama/minimarket).
