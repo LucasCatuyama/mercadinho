@@ -53,4 +53,4 @@ npm install json-server
 npx json-server --watch db.json --port 3000
 ```
 
-Open the application at [http://localhost:5173](http://localhost:5173).
+Open the application at [http://localhost:8000](http://localhost:8000/).
