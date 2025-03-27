@@ -1,49 +1,56 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# Mercadinho 🛒
 
-## 🚀 Quick start
+Mercadinho is a frontend project simulating a mini virtual market with complete CRUD functionalities. It was developed as part of a university Front-End class.
 
-1.  **Create a Gatsby site.**
+## ⚠️ Important Notes
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+This project contains several mistakes and inconsistencies as it was my first React.js project. Notable points include:
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+- **Gatsby** was not an ideal choice for this type of project.
+- Component names are incorrectly formatted (first letters not uppercase).
+- No further updates or maintenance will be provided.
 
-2.  **Start developing.**
+This project is currently being refactored and improved in [minimarket](https://github.com/LucasCatuyama/minimarket).
 
-    Navigate into your new site’s directory and start it up.
+## Technologies 🚀
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+- **Frontend:** React, Vite, Tailwind CSS
+- **API:** Fake API using JSON Server for backend simulation
 
-3.  **Open the code and start customizing!**
+## Features ✨
 
-    Your site is now running at http://localhost:8000!
+- **Product listing** available for purchase
+- **Add products** to the cart
+- **Update quantity** of products in the cart
+- **Remove products** from the cart
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## Prerequisites 📋
 
-4.  **Learn more**
+- [Node.js](https://nodejs.org/en) (recommended version 18 or higher)
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Installation ⚙️
 
-## 🚀 Quick start (Netlify)
+Clone the repository:
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+```bash
+git clone https://github.com/LucasCatuyama/mercadinho.git
+cd mercadinho
+```
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Install dependencies and run the project:
+
+```bash
+npm install
+npm run dev
+```
+
+### Fake JSON API Setup
+
+This project uses JSON Server as a fake backend. To run the JSON Server:
+
+```bash
+npm install json-server
+npx json-server --watch db.json --port 3000
+```
+
+Open the application at [http://localhost:5173](http://localhost:5173).
