@@ -17,7 +17,7 @@ export default function IndexPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/products")
+      .get("https://mercadinho-api.onrender.com/products")
       .then((response) => {
         setProducts(response.data);
       })
@@ -26,7 +26,7 @@ export default function IndexPage() {
       });
 
     axios
-      .get("http://localhost:3000/cart")
+      .get("https://mercadinho-api.onrender.com/cart")
       .then((response) => {
         setCart(response.data);
         calculateTotalQuantity(response.data); // Calculate total quantity on initial load
@@ -57,7 +57,7 @@ export default function IndexPage() {
       setCart(updatedCart);
 
       try {
-        await axios.put(`http://localhost:3000/cart/${existingProduct.id}`, {
+        await axios.put(`https://mercadinho-api.onrender.com/cart/${existingProduct.id}`, {
           ...existingProduct,
           quantity: existingProduct.quantity + 1
         });
@@ -80,7 +80,7 @@ export default function IndexPage() {
       };
 
       try {
-        await axios.post('http://localhost:3000/cart', newCartItem);
+        await axios.post('https://mercadinho-api.onrender.com//cart', newCartItem);
         setCart([...cart, newCartItem]);
         setErrors((prevErrors) => ({ ...prevErrors, [product.id]: '' }));
         setSuccess((prevSuccess) => ({ ...prevSuccess, [product.id]: 'Product added!' }));
